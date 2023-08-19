@@ -1,0 +1,17 @@
+.btn{
+	background-color:#406eec;
+	color: rgb(243, 242, 242);
+	text-decoration: none;
+	border: 2px solid transparent;
+	font-weight: bold;
+    margin-left: 20px;
+	padding: 10px 25px;
+	border-radius: 50px;
+	transition: transform .4s; 
+}
+
+
+.btn:hover{
+	transform: scale(1.2);
+    color:#406eec;
+}

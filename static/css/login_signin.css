@@ -1,0 +1,41 @@
+.loginform{
+
+    display: flex;
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+    
+}
+
+.logbuttom{
+    margin-top: 20px;
+
+}
+
+
+.card {
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+}
+
+
+/* .abc{
+    text-align: center;
+} */
+
+
+.row{
+    align-items: center;
+    text-align: center;
+}
+
+
+
+
+
+.rownew{
+
+    border: 3px solid green;
+}

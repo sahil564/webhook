@@ -1,0 +1,221 @@
+<!-- {% comment %} {% load static %} 
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="{% static 'img/logo3.png' %}">
+    <link rel="stylesheet" href="{% static 'css/login_signin.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fire-Connect</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar bg-dark navbar-dark">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1">CITRIOT</span>
+            </div>
+        
+        </nav>
+   <h1 class="text-center text-success">WELCOME TO CITRIOT!!!</h1>
+
+   
+  <div class="loginform">
+  <div class="card" style="width: 59rem;">
+    <form action="{% url "register" %}" method="POST"   class="row g-3">
+      {% csrf_token %}
+        <div class="form-group">
+            <label for="inputEmail4" class="form-label">First Name</label>
+            <div class="col-sm-20">
+            <input name="first_name",type="text" class="form-control" id="">
+          </div>
+          </div>
+          <div class="form-group">
+            <label for="inputEmail4" class="form-label">Last Name</label>
+            <input name="last_name" type="text" class="form-control" id="">
+          </div>
+          <div class="form-group">
+            <label for="inputEmail4" class="form-label">Email</label>
+            <input name="email" type="email" class="form-control" id="inputEmail4">
+          </div>
+          <div class="form-group">
+            <label for="inputEmail4" class="form-label">User Name</label>
+            <input name="username" type="text" class="form-control" >
+          </div>
+        <div class="form-group">
+          <label for="inputPassword4" class="form-label">Password</label>
+          <input name="password" type="password" class="form-control" id="inputPassword4">
+        </div>
+        <div class="form-group">
+            <label for="inputPassword4" class="form-label"> Confirm Password</label>
+            <input name="confirm_password" type="password" class="form-control" id="inputPassword4">
+          </div>
+ 
+
+        <div class="col-12">
+          <button type="submit" class="btn btn-success btn-lg"  onclick="return alert('User successfully registered please login')">Register</button>
+          <a  href={% url "login_user" %}  type="button" class="btn btn-success btn-lg">login</a>
+        </div>
+      </form>
+
+
+      <div class="form-group">
+        {% for message in messages %}
+        <div class="alert alert-danger" role="alert">
+            {{message}}
+        </div>
+         {% endfor %}
+    </div>
+  </div>
+
+
+
+   </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  </body>
+</html> {% endcomment %} -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% load static %} 
+<!doctype html>
+<html lang="en">
+  <head>
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/newlogin.css' %}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- <link rel="shortcut icon" href="{% static 'img/logo3.png' %}"> -->
+    <link rel="shortcut icon" href="{% static 'img/logo3.png' %}">
+    <link rel="stylesheet" href="{% static 'css/login_signin.css' %}">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VLCC</title>
+ 
+  </head>
+  <body>
+
+   
+      <div class="card" style="width: 59rem;">
+        <div class="card-body">
+          <div class="container-fluid">
+            <div class="form-group">
+              {% for message in messages %}
+              <div class="alert alert-danger" role="alert">
+                  {{message}}
+              </div>
+               {% endfor %}
+          </div>
+
+
+   <div class="box">
+    <div class="container">
+
+        <div class="top">
+            <span>Welcome to VLCC</span>
+            <header>Login</header>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+        
+      <form action="{% url "register" %}" method="POST">
+        {% csrf_token %}
+        <div class="input-field">
+            <input type="text" name="first_name" class="input" placeholder="First Name" id="">
+            
+        </div>
+
+        <div class="input-field">
+            <input name="last_name" type="text" class="input" placeholder="Last Name" id="">
+        
+        </div>
+
+
+        <div class="input-field">
+          <input name="gender" type="text" class="input" placeholder="gender" id="">
+      
+      </div>
+
+
+
+        <div class="input-field">
+          <input name="email"  type="email" class="input" placeholder="Email" id="">
+      
+      </div>
+
+      <div class="input-field">
+        <input name="number" type="text" class="input" placeholder="phone number" id="">
+   
+    </div>
+
+    <div class="input-field">
+      <input name="category" type="text" class="input" placeholder="category" id="">
+  
+  </div>
+
+    <div class="input-field">
+      <input name="service" type="text" class="input" placeholder="enter service" id="">
+  
+  </div>
+
+  
+
+
+
+  <div class="input-field">
+    <input name="city" type="text" class="input" placeholder="inter your city" id="">
+
+</div>
+
+
+<div class="input-field">
+  <input name="center" type="Password" class="input" placeholder="enter center" id="">
+
+</div>
+
+
+        <div class="input-field">
+            <input type="submit" class="submit" value="Register" id="">
+        </div>
+      </form>
+        <div class="two-col">
+            <div class="one">
+               <input type="checkbox" name="" id="check">
+               <label for="check"> Remember Me</label>
+            </div>
+
+        </div>
+    </div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  </body>
+</html>
